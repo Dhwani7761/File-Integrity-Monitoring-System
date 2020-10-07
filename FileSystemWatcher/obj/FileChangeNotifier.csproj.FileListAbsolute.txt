@@ -1,0 +1,8 @@
+C:\MyProjects\MyToolbox\FileSystemWatcher\obj\Debug\ResolveAssemblyReference.cache
+C:\MyProjects\MyToolbox\FileSystemWatcher\obj\Debug\FileSystemWatcher.Properties.Resources.resources
+C:\MyProjects\MyToolbox\FileSystemWatcher\obj\Debug\FileChangeNotifier.csproj.GenerateResource.Cache
+C:\MyProjects\MyToolbox\FileSystemWatcher\obj\Debug\FileChangeNotifier.Form1.resources
+C:\MyProjects\MyToolbox\FileSystemWatcher\bin\Debug\FileSystemWatcher.exe
+C:\MyProjects\MyToolbox\FileSystemWatcher\bin\Debug\FileSystemWatcher.pdb
+C:\MyProjects\MyToolbox\FileSystemWatcher\obj\Debug\FileSystemWatcher.exe
+C:\MyProjects\MyToolbox\FileSystemWatcher\obj\Debug\FileSystemWatcher.pdb

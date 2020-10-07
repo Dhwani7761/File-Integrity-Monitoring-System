@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="ccc" align="right">
+    <h1><font size="700px"><b>File Security and Monitoring System</b></font></h1>
+    <br />
+</div>
+
+<div class="row" align="center">
+    @*<img class="mySlides" src="~/mySlides/img1.png" style="width:100%">*@
+    <img class="mySlides" src="~/mySlides/img2.jpg" style="width:1150px" height="400px">
+    <img class="mySlides" src="~/mySlides/img3.jpg" style="width:1150px" height="400px">
+    <img class="mySlides" src="~/mySlides/img4.jpg" style="width:1150px" height="400px">
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</div>

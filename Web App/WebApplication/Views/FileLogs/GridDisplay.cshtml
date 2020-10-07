@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebApplication.Models.FileLogs>
+@using GridMvc.Html
+@using WebApplication.Extensions
+@{
+    ViewBag.Title = "File Logs Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center><h2>File logs Report</h2></center>
+<link href="~/AdminLTE/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/AdminLTE/plugins/jquery/js/jQuery-2.1.4.min.js"></script>
+<script src="~/Scripts/gridmvc.min.js"></script>
+<link href="~/AdminLTE/bootstrap/css/Gridmvc.css" rel="stylesheet" />
+<div class="code-cut">
+    @Html.Grid(Model).Columns(Columns =>
+{
+    Columns.Add(c => c.f_id).Titled("ID").Filterable(true);
+    Columns.Add(c => c.f_name).Titled("Name").Filterable(true);
+    Columns.Add(c => c.f_path).Titled("Path").Filterable(true);
+    Columns.Add(c => c.f_action).Titled("Action").Filterable(true);
+    Columns.Add(c => c.f_dtime).Titled("Date").Filterable(true);
+    Columns.Add(c => c.f_hname).Titled("Host Name").Filterable(true);
+    Columns.Add()
+    .Encoded(false)
+    .Sanitized(false)
+    .SetWidth(30)
+    .RenderValueAs(o => Html.ActionLink(" ", "Edit", new
+     {
+         id = o.f_id
+     }));
+}).WithPaging(10).Sortable(true)
+    <br />
+ <b>  Date :</b>   @Html.Label("Date Created", DateTime.Now.ToString(), new { @readonly = "readonly" })
+    <span style="float:right;">
+       <b> User :  @User.Identity.GetUserNameIdentifier() </b>
+    </span>
+</div>
+<div class="col-xs-4">
+    <br />
+    <input type="button" class="btn btn-primary btn-block btn-flat" onclick="location.href='/Report/Report1';" value="Go to Report"/>
+</div>
+<br />
+<br />
